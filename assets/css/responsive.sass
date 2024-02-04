@@ -1,7 +1,11 @@
+@use 'variables'
+@use 'short-code'
 
+@media (min-width: 1439px) and (max-width: 1681px)
 
-@media (min-width: 1280px) and (max-width: 1681px)
-   
+@media (min-width: 1280px) and (max-width: 1439px)
+    .cs-container-1
+        max-width: 1200px
 @media (min-width: 1024px) and (max-width: 1279px)
     #goTpButton
         bottom: 60px
@@ -10,6 +14,37 @@
     #goTpButton
         bottom: 60px
         right: 5px
+    .cs-container-1
+        padding: 0 2%
+    .cs-sec-1 
+        .cs-banner-1 
+            .cs-left 
+                .cs-banner-button
+                    justify-content: center
+    .cs-sec-3 
+        .cs-sec3-main 
+            .cs-bg-img-2
+                right: 0
+                top: auto
+                bottom: 0
+                height: 570px
+    .cs-sec-5 
+        .cs-sec5-bg 
+            .cs-sec5-imgbox 
+                .cs-img-1
+                    max-width: 600px
+                    right: auto
+                    left: 0
+                .cs-img-2
+                    max-width: 600px
+                    right: auto
+                    left: 50px
+    .cs-footer-main 
+        .cs-footer-list-2
+            gap: 12px
+        .cs-footer-area 
+            .cs-footer-menu
+                overflow: hidden
 @media (max-width: 767px)
     #goTpButton
         width: 40px
@@ -21,6 +56,157 @@
             line-height: 50px
             position: relative
             bottom: 5px
+    .cs-container-1
+        padding: 0 15px
+    .cs-main-menu
+        min-height: auto
+    .cs-sec-1 
+        background: none
+        // background-image: url('/assets/img/banner-1.png') 
+        padding-top: 40px
+        .cs-cardlist-1 
+            padding-top: 200px 
+            .cs-item
+                display: flex
+                flex-direction: column
+                align-items: center
+                text-align: center
+        .cs-banner-1 
+            .cs-left 
+                .cs-banner-title
+                    font-size: 56px
+                    text-align: center
+                    line-height: 62px
+                .cs-banner-desc
+                    text-align: center
+                .cs-banner-button 
+                    margin-bottom: 40px
+                    .cs-link-1
+                        &.active
+                            padding: 12px 16px
+            .cs-right 
+                .cs-bg-color
+                    max-width: 270px
+                    height: 275px
+                    margin: 0 auto
+                img
+                    max-width: 360px
+                    height: 285px
+                    left: 50%
+                    transform: translateX(-50%)
+    .cs-sec-2 
+        .cs-textbox-1
+            flex-direction: column
+            align-items: center
+            text-align: center
+            gap: 10px
+            .cs-title
+                font-size: 32px
+                line-height: 40px
+    .cs-sec-3 
+        padding: 30px 0 55px 0
+        .cs-sec3-main 
+            padding: 15px
+            .cs-sec3-video 
+                .cs-title
+                    font-size: 32px
+                    line-height: 40px
+                    text-align: center
+                .cs-list-2 
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    li
+                        font-size: 16px
+                        line-height: 24px
+            .cs-bg-img-2
+                right: 0
+                top: auto
+                bottom: 0
+                height: 315px
+            .cs-right-img
+                height: 235px
+                max-width: 330px
+            .cs-right 
+                .cs-ball
+                    bottom: 10px
+                    width: 50px
+                    height: 50px
+    .cs-sec-4-0 
+        .cs-carousel-title
+            font-size: 32px
+            line-height: 40px
+    .cs-sec-4 
+        padding: 0 0 20px 0
+        .cs-carousel-1 
+            .owl-nav
+                display: none
+            .item 
+                .cs-desc
+                    font-size: 16px
+                    line-height: 24px
+    .cs-sec-5 
+        .cs-sec5-bg 
+            .cs-sec5-list
+                flex-direction: row
+                overflow: hidden
+                overflow-x: auto
+                align-items: center
+                margin: 0
+                &::-webkit-scrollbar
+                    height: 4px
+                    background-color: variables.$bgColor3
+        .cs-textbox-3 
+            .cs-title
+                font-size: 32px
+                line-height: 40px
+                text-align: center
+            .cs-desc
+                font-size: 16px
+                line-height: 24px
+    .cs-sec-5 
+        .cs-sec5-bg 
+            margin-top: 0
+            .cs-sec5-imgbox 
+                margin-top: 50px
+                .cs-img-1
+                    max-width: 295px
+                    right: auto
+                    left: 0
+                .cs-img-2
+                    max-width: 295px
+                    right: auto
+                    left: 25px
+                .cs-img-3
+                    max-width: 95px
+                    
+    .cs-sec-6 
+        .cs-sec6-main 
+            height: 580px
+            .cs-map,.cs-ellipses,.cs-sec6-text
+                top: 65%
+            .cs-sec6-text 
+                .cs-title-1
+                    font-size: 48px
+                    line-height: 56px
+                .cs-title-2
+                    font-size: 32px
+                    line-height: 40px
+            .cs-textbox-4
+                margin: 0 auto
+    .cs-footer-main 
+        .cs-footer-area 
+            gap: 30px
+            .cs-footer-menu
+                align-items: center
+            .cs-title
+                text-align: center
+        .cs-footer-list-2
+            justify-content: center
+        .cs-privacy-area
+            flex-direction: column
+                
+    
 @media (min-width: 500px)
     #goTpButton
         margin: 30px

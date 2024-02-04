@@ -1,7 +1,7 @@
 @use 'variables'
 @use 'short-code'
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
 @import url('../vendor/bootstrap-5.2/css/bootstrap.min.css')
 @import url('../vendor/fontawesome/css/all.min.css')
 @import url('../vendor/icomoon/style.css')
@@ -10,15 +10,6 @@
     font-family: variables.$mainFontFamily
 html
     scroll-behavior: smooth
-a,button
-    @include short-code.text-DO
-    cursor: pointer
-a
-    &:hover, &:focus
-        @include short-code.text-DO
-button
-    &:hover, &:focus
-        @include short-code.text-DO
 #goTpButton
     display: inline-block
     background-color: variables.$primaryColor
@@ -45,3 +36,555 @@ button
     max-width: 1280px
     width: 100%
     margin: 0 auto
+.cs-container-2
+    max-width: 1050px
+    width: 100%
+    margin: 0 auto
+.cs-main-menu
+    background-color: variables.$primaryColor
+    min-height: 96px
+    display: flex
+    align-items: center
+    .navbar-collapse
+        flex-grow: inherit !important
+    .navbar-brand
+        color: variables.$secondaryColor
+        font-weight: variables.$fontWeightBold
+        font-size: 32px
+        line-height: 40px
+        &:hover
+            color: variables.$secondaryColor
+    .navbar-nav 
+        gap: 10px
+        align-items: center
+        .nav-link
+            font-size: 16px
+            line-height: 24px
+            font-weight: variables.$fontWeightMedium
+            color: variables.$secondaryColor
+            border: 2px solid transparent
+            padding: 12px
+            transition: all 0.2s
+            &.active
+                border: 2px solid variables.$secondaryColor
+                border-radius: 8px
+                padding: 12px
+                transition: all 0.2s
+.cs-sec-1
+    width: 100%
+    height: auto
+    background-repeat: no-repeat !important
+    padding-top: 100px
+    object-fit: contain
+    background-color: variables.$primaryColor
+    // background: linear-gradient(to bottom right,#fefbeb 0%,#fefbeb 53%,#fef3c7 53%,#fef3c7 100%)
+    .cs-banner-1
+        justify-content: space-between
+        align-items: center
+        .cs-left
+            max-width: 715px
+            width: 100%
+            .cs-banner-title
+                font-weight: variables.$fontWeightBold2
+                color: variables.$color1
+                font-size: 72px
+                line-height: 80px
+            .cs-banner-desc
+                font-size: 18px
+                line-height: 26px
+                color: variables.$color1
+                font-weight: variables.$fontWeightRegular
+                margin: 20px 0
+            .cs-banner-button
+                display: flex
+                list-style: none
+                padding: 0
+                gap: 30px
+                align-items: center
+                margin-top: 30px
+                .cs-link-1
+                    font-size: 16px
+                    line-height: 24px
+                    color: variables.$secondaryColor
+                    font-weight: variables.$fontWeightMedium
+                    text-decoration: none
+                    display: flex
+                    align-items: center
+                    gap: 5px
+                    &.active
+                        font-size: 20px
+                        line-height: 28px
+                        border-radius: 8px
+                        border: 2px solid variables.$secondaryColor
+                        padding: 12px 45px
+        .cs-right
+            position: relative
+            .cs-bg-color
+                max-width: 370px
+                height: 375px
+                background-color: variables.$bgColor1
+                border-radius: 50px
+            img
+                max-width: 485px
+                width: 100%
+                height: 385px
+                object-fit: contain
+                position: absolute
+                top: -30px
+                left: -30px
+    .cs-cardlist-1
+        padding-top: 130px
+        justify-content: space-between
+        align-items: center
+        padding-bottom: 50px
+        .cs-item
+            max-width: 375px
+            width: 100%
+        .cs-img-box
+            position: relative
+            height: 100px
+            width: 65px
+            #img-2
+                width: 53px
+                height: 53px
+            #img-3
+                width: 45px
+                height: 45px
+            .cs-img-1
+                position: absolute
+                top: 0
+                right: 0
+                object-fit: contain
+            .cs-img-2
+                position: absolute
+                top: 8px
+                left: -10px
+                width: 64px
+                height: 64px
+                object-fit: contain
+        .cs-title
+            font-size: 20px
+            line-height: 28px
+            color: variables.$color1
+            font-weight: variables.$fontWeightMedium
+        .cs-desc
+            font-size: 18px
+            line-height: 26px
+            color: variables.$color1
+            font-weight: variables.$fontWeightRegular
+.cs-sec-2
+    background-color: variables.$color1
+    .cs-banner-bg2
+        background-image: url('/assets/img/banner-2.png') 
+        background-repeat: no-repeat
+        background-position-x: center
+        width: 100%    
+        padding-top: 30px
+    .cs-banner-2
+        justify-content: space-between
+        padding: 25px 0 100px 0
+    .card
+        background-color: variables.$color1
+        box-shadow: rgba(255, 255, 255, 0.25) 0px 13px 27px -5px, rgba(255, 255, 255, 0.3) 0px 8px 16px -8px
+        max-width: 395px
+        width: 100%
+        .card-body
+            padding: 25px 20px
+        .card-img-top
+            height: 220px
+        .card-title
+            font-size: 24px
+            line-height: 32px
+            font-weight: variables.$fontWeightBold
+            color: variables.$whiteColor
+        .card-text
+            font-size: 18px
+            line-height: 26px
+            font-weight: variables.$fontWeightRegular
+            color: variables.$whiteColor
+        .cs-white-btn
+            color: variables.$whiteColor
+            font-size: 20px
+            line-height: 28px
+            border: 2px solid variables.$whiteColor
+            padding: 12px
+            border-radius: 8px
+            transition: all 0.3s ease
+            width: 100%
+            margin-top: 20px
+            display: flex
+            align-items: center
+            justify-content: center
+            gap: 10px
+    .cs-textbox-1
+        width: 100%
+        display: flex
+        justify-content: space-between  
+        align-items: center
+        padding: 80px 0 40px 0
+        .cs-title
+            font-size: 56px
+            line-height: 64px
+            color: variables.$whiteColor
+            font-weight: variables.$fontWeightBold2   
+        .cs-link-1
+            font-size: 24px
+            line-height: 24px
+            font-weight: variables.$fontWeightBold
+            color: variables.$whiteColor  
+            padding: 12px 25px
+            border-radius: 8px
+            border: 2px solid variables.$whiteColor
+            text-decoration: none
+            transition: all 0.3s ease
+            &:hover
+                color: variables.$color1  
+                background-color: variables.$whiteColor
+                border: 2px solid variables.$color1
+                transition: all 0.3s ease
+.cs-sec-3
+    width: 100%
+    height: auto
+    padding: 100px 0 230px 0
+    background-color: variables.$primaryColor
+    .cs-sec3-main
+        position: relative
+        background-color: variables.$whiteColor
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px
+        border-radius: 30px
+        padding: 80px
+        .cs-right
+            position: relative
+            .cs-ball
+                position: absolute
+                bottom: -10px
+                left: 100px
+                width: 85px
+                height: 85px
+                object-fit: contain
+        .cs-right-img
+            max-width: 520px
+            width: 100%
+            height: 350px
+            object-fit: cover
+        .cs-bg-img-2
+            position: absolute
+            top: -60px
+            right: -20px
+            z-index: 0
+            max-width: 715px
+            width: 100%
+            height: 625px
+            object-fit: contain
+            z-index: 1
+        .cs-sec3-video
+            position: relative
+            z-index: 2
+            align-items: center
+            justify-content: space-between
+            .cs-title
+                font-size: 56px
+                line-height: 64px
+                color: variables.$color1
+                font-weight: variables.$fontWeightBold2
+            .cs-list-2
+                padding: 0
+                list-style: none
+                max-width: 495px
+                width: 100%
+                li
+                    font-size: 20px
+                    line-height: 28px
+                    color: variables.$color1
+                    font-weight: variables.$fontWeightRegular
+                    margin-bottom: 5px
+                    display: flex
+                    gap: 10px
+                    align-items: center
+            .cs-signupbtn
+                color: variables.$secondaryColor
+                border: 2px solid variables.$secondaryColor
+                padding: 12px 45px
+                border-radius: 8px
+                transition: all 0.3s ease
+                margin-top: 20px
+                &:hover
+                    background: variables.$secondaryColor
+                    color: variables.$whiteColor
+                    border: 2px solid variables.$whiteColor
+                    transition: all 0.3s ease
+.cs-sec-4-0
+    padding-bottom: 60px
+    background: variables.$primaryColor
+    .cs-carousel-title
+        margin-left: 30px
+        font-size: 56px
+        line-height: 64px
+        color: variables.$color1
+        font-weight: variables.$fontWeightBold2
+.cs-sec-4
+    position: relative
+    width: 100%
+    background: variables.$primaryColor
+    padding: 0 0 100px 0
+    display: flex
+    align-items: center
+    .cs-bg-main
+        position: absolute
+        z-index: 1
+        background-color: variables.$bgColor2    
+        max-width: 1360px
+        width: 100%
+        height: 320px
+        left: 50%
+        top: -50px
+        transform: translateX(-50%)
+    .cs-carousel-1
+        position: relative
+        z-index: 2
+        .owl-nav
+            position: absolute
+            top: -110px
+            right: 5%
+            display: flex
+            gap: 15px
+            button
+                i
+                    padding: 10px
+                    border-radius: 50%
+                    border: 2px solid variables.$secondaryColor
+                    color: variables.$secondaryColor
+        .owl-stage-outer
+            height: 100% !important
+        .item
+            background-color: variables.$whiteColor
+            padding: 30px
+            border-radius: 20px
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+            .cs-desc
+                font-size: 18px
+                line-height: 26px
+                color: variables.$colorBlack
+                font-weight: variables.$fontWeightRegular
+                margin-top: 12px
+                display: -webkit-box
+                -webkit-line-clamp: 4
+                -webkit-box-orient: vertical
+                overflow: hidden
+                text-overflow: ellipsis
+                height: 100px
+            .cs-duo
+                display: flex
+                align-items: center
+                gap: 10px
+                margin: 10px 0
+                .cs-logo-img
+                    width: 32px
+                    height: 32px
+                    border-radius: 50%
+                    object-fit: contain
+                .cs-title
+                    font-size: 24px
+                    line-height: 32px
+                    color: variables.$color2
+                    font-weight: variables.$fontWeightBold
+                    margin: 0
+                .cs-user-img
+                    width: 64px
+                    height: 64px
+                    object-fit: contain
+                    border-radius: 50%
+                .cs-title-2
+                    font-size: 18px
+                    line-height: 26px
+                    color: variables.$colorBlack
+                    font-weight: variables.$fontWeightRegular
+                    margin: 0
+                .cs-desc-2
+                    color: variables.$color2
+                    font-size: 16px
+                    line-height: 24px
+                    font-weight: variables.$fontWeightRegular
+.cs-sec-5
+    height: 110vh
+    width: 100%
+    background-color: variables.$primaryColor 
+    .cs-textbox-3
+        .cs-title
+            font-size: 56px
+            line-height: 64px
+            color: variables.$color1
+            font-weight: variables.$fontWeightBold2
+            margin-bottom: 30px
+        .cs-desc
+            font-size: 18px
+            line-height: 26px
+            color: variables.$color1
+            font-weight: variables.$fontWeightRegular
+    .cs-sec5-bg
+        background-repeat: no-repeat
+        padding-bottom: 100px
+        width: 100%
+        height: 100%
+        margin-top: 50px
+        .cs-sec5-list
+            list-style: none
+            padding: 0
+            display: flex
+            flex-direction: column
+            gap: 20px
+            margin-top: 50px
+            .cs-item 
+                a
+                    font-size: 20px
+                    line-height: 28px
+                    font-weight: variables.$fontWeightMedium
+                    color: variables.$color1
+                    text-decoration: none
+                    display: flex
+                    gap: 10px
+                    align-items: center
+                    width: max-content
+                    &.active
+                        padding: 12px 12px
+                        border-radius: 8px
+                        background: variables.$whiteColor
+                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+                        .cs-right-icon
+                            display: flex
+                    .cs-right-icon
+                        display: none
+        .cs-sec5-imgbox
+            position: relative
+            .cs-sec5-row
+                justify-content: space-between
+                align-items: flex-end
+            .cs-img-1
+                position: absolute
+                top: 0
+                right: 150px
+                max-width: 760px
+                width: 100%
+            .cs-img-2
+                position: absolute
+                top: 100px
+                right: 50px
+                max-width: 760px
+                width: 100%
+            .cs-img-3
+                position: absolute
+                top: 180px
+                right: 0
+                max-width: 255px
+                width: 100%
+.cs-sec-6
+    background: variables.$secondaryColor
+    .cs-sec6-main
+        position: relative
+        height: 650px
+        .cs-map
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%,-50%)
+            z-index: 0
+            width: 100%
+        .cs-ellipses
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%,-50%)
+            z-index: 0
+            max-width: 724px
+            width: 100%
+            height: 425px
+            object-fit: contain
+        .cs-sec6-text
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%,-50%)
+            z-index: 1
+            .cs-title-1
+                font-size: 96px
+                line-height: 104px
+                color: variables.$whiteColor
+                font-weight: variables.$fontWeightBold2
+                text-align: center
+            .cs-title-2
+                font-size: 56px
+                line-height: 64px
+                color: variables.$whiteColor
+                font-weight: variables.$fontWeightBold2
+                text-align: center
+        .cs-textbox-4
+            max-width: 255px
+            width: 100%
+            z-index: 1 !important
+            position: relative
+            display: flex
+            align-items: center
+            flex-direction: column
+            img
+                width: 100%
+            .cs-desc
+                font-size: 14px
+                line-height: 22px
+                border-radius: 4px
+                color: #0F172A
+                font-weight: 400
+                padding: 10px
+                background: #E2E8F0
+                margin-top: -38px
+                max-width: 210px
+                width: 100%
+                position: relative
+                z-index: 2
+.cs-footer-main
+    background: variables.$color1
+    padding-top: 50px
+    .cs-footer-area
+        .cs-title
+            font-size: 16px
+            line-height: 24px
+            color: variables.$whiteColor
+            font-weight: variables.$fontWeightMedium
+            margin-bottom: 15px
+        .cs-footer-menu
+            list-style: none
+            padding: 0
+            display: flex
+            flex-direction: column
+            gap: 10px
+            li
+                a
+                    font-size: 16px
+                    line-height: 24px
+                    color: variables.$whiteColor
+                    font-weight: variables.$fontWeightRegular
+                    text-decoration: none
+    .cs-footer-list-2
+        display: flex
+        list-style: none
+        padding: 0
+        align-items: center
+        gap: 20px
+        li
+            a
+                color: variables.$bgColor3
+                font-size: 16px
+                line-height: 24px
+                font-weight: variables.$fontWeightRegular
+                text-decoration: none
+    .cs-privacy-area
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 24px 0
+        border-top: 0.5px solid variables.$bgColor3
+        margin-top: 20px
+        .cs-desc
+            color: variables.$bgColor3
+            font-size: 16px
+            line-height: 24px
+            font-weight: variables.$fontWeightRegular
