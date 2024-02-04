@@ -21,6 +21,13 @@
             .cs-left 
                 .cs-banner-button
                     justify-content: center
+            .cs-right 
+                margin-top: 30px
+                .cs-bg-color
+                    margin: 0 auto
+                img
+                    left: 50%
+                    transform: translateX(-50%)
     .cs-sec-3 
         .cs-sec3-main 
             .cs-bg-img-2
@@ -28,8 +35,11 @@
                 top: auto
                 bottom: 0
                 height: 570px
+    .cs-sec-4
+        padding: 0 0 50px 0
     .cs-sec-5 
         .cs-sec5-bg 
+            margin: 0
             .cs-sec5-imgbox 
                 .cs-img-1
                     max-width: 600px
@@ -39,6 +49,10 @@
                     max-width: 600px
                     right: auto
                     left: 50px
+    .cs-sec-6 
+        .cs-sec6-main 
+            .cs-sec6-text
+                top: 55%
     .cs-footer-main 
         .cs-footer-list-2
             gap: 12px
@@ -60,6 +74,9 @@
         padding: 0 15px
     .cs-main-menu
         min-height: auto
+        background: variables.$whiteColor
+        .navbar-nav
+            gap: 0
     .cs-sec-1 
         background: none
         // background-image: url('/assets/img/banner-1.png') 
@@ -123,7 +140,7 @@
                 right: 0
                 top: auto
                 bottom: 0
-                height: 315px
+                height: 290px
             .cs-right-img
                 height: 235px
                 max-width: 330px
@@ -154,8 +171,8 @@
                 align-items: center
                 margin: 0
                 &::-webkit-scrollbar
-                    height: 4px
-                    background-color: variables.$bgColor3
+                    height: 0
+                    // background-color: variables.$bgColor3
         .cs-textbox-3 
             .cs-title
                 font-size: 32px
@@ -165,8 +182,10 @@
                 font-size: 16px
                 line-height: 24px
     .cs-sec-5 
+        height: 650px
         .cs-sec5-bg 
             margin-top: 0
+            background-position-y: -250px
             .cs-sec5-imgbox 
                 margin-top: 50px
                 .cs-img-1
@@ -179,10 +198,11 @@
                     left: 25px
                 .cs-img-3
                     max-width: 95px
-                    
+
     .cs-sec-6 
         .cs-sec6-main 
             height: 580px
+            padding-top: 50px
             .cs-map,.cs-ellipses,.cs-sec6-text
                 top: 65%
             .cs-sec6-text 

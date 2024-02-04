@@ -671,6 +671,16 @@ html {
   font-weight: 400;
   text-decoration: none;
 }
+.cs-footer-main .cs-footer-area .cs-footer-menu li a .cs-img-1 {
+  max-width: 120px;
+  height: 45px;
+  object-fit: contain;
+}
+.cs-footer-main .cs-footer-area .cs-footer-menu li a .cs-img-2 {
+  max-width: 135px;
+  height: 45px;
+  object-fit: contain;
+}
 .cs-footer-main .cs-footer-list-2 {
   display: flex;
   list-style: none;
@@ -698,4 +708,15 @@ html {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+}
+
+.navbar-toggler {
+  box-shadow: none;
+  border: none;
+  outline: 0;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+  border: none;
+  outline: 0;
 }/*# sourceMappingURL=main.css.map */

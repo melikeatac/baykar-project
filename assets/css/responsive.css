@@ -20,11 +20,27 @@
   .cs-sec-1 .cs-banner-1 .cs-left .cs-banner-button {
     justify-content: center;
   }
+  .cs-sec-1 .cs-banner-1 .cs-right {
+    margin-top: 30px;
+  }
+  .cs-sec-1 .cs-banner-1 .cs-right .cs-bg-color {
+    margin: 0 auto;
+  }
+  .cs-sec-1 .cs-banner-1 .cs-right img {
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .cs-sec-3 .cs-sec3-main .cs-bg-img-2 {
     right: 0;
     top: auto;
     bottom: 0;
     height: 570px;
+  }
+  .cs-sec-4 {
+    padding: 0 0 50px 0;
+  }
+  .cs-sec-5 .cs-sec5-bg {
+    margin: 0;
   }
   .cs-sec-5 .cs-sec5-bg .cs-sec5-imgbox .cs-img-1 {
     max-width: 600px;
@@ -35,6 +51,9 @@
     max-width: 600px;
     right: auto;
     left: 50px;
+  }
+  .cs-sec-6 .cs-sec6-main .cs-sec6-text {
+    top: 55%;
   }
   .cs-footer-main .cs-footer-list-2 {
     gap: 12px;
@@ -61,6 +80,10 @@
   }
   .cs-main-menu {
     min-height: auto;
+    background: #ffffff;
+  }
+  .cs-main-menu .navbar-nav {
+    gap: 0;
   }
   .cs-sec-1 {
     background: none;
@@ -134,7 +157,7 @@
     right: 0;
     top: auto;
     bottom: 0;
-    height: 315px;
+    height: 290px;
   }
   .cs-sec-3 .cs-sec3-main .cs-right-img {
     height: 235px;
@@ -167,8 +190,7 @@
     margin: 0;
   }
   .cs-sec-5 .cs-sec5-bg .cs-sec5-list::-webkit-scrollbar {
-    height: 4px;
-    background-color: #E2E8F0;
+    height: 0;
   }
   .cs-sec-5 .cs-textbox-3 .cs-title {
     font-size: 32px;
@@ -179,8 +201,12 @@
     font-size: 16px;
     line-height: 24px;
   }
+  .cs-sec-5 {
+    height: 650px;
+  }
   .cs-sec-5 .cs-sec5-bg {
     margin-top: 0;
+    background-position-y: -250px;
   }
   .cs-sec-5 .cs-sec5-bg .cs-sec5-imgbox {
     margin-top: 50px;
@@ -200,6 +226,7 @@
   }
   .cs-sec-6 .cs-sec6-main {
     height: 580px;
+    padding-top: 50px;
   }
   .cs-sec-6 .cs-sec6-main .cs-map, .cs-sec-6 .cs-sec6-main .cs-ellipses, .cs-sec-6 .cs-sec6-main .cs-sec6-text {
     top: 65%;
