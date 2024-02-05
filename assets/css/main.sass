@@ -77,7 +77,7 @@ html
     padding-top: 100px
     object-fit: contain
     background-color: variables.$primaryColor
-    // background: linear-gradient(to bottom right,#fefbeb 0%,#fefbeb 53%,#fef3c7 53%,#fef3c7 100%)
+    background: linear-gradient(to bottom right,#fefbeb 0%,#fefbeb 53%,#fef3c7 53%,#fef3c7 100%)
     .cs-banner-1
         justify-content: space-between
         align-items: center
@@ -335,13 +335,15 @@ html
         background-color: variables.$bgColor2    
         max-width: 1360px
         width: 100%
-        height: 320px
+        height: 420px
         left: 50%
         top: -50px
         transform: translateX(-50%)
     .cs-carousel-1
         position: relative
         z-index: 2
+        .owl-stage-outer
+            padding-bottom: 40px
         .owl-nav
             position: absolute
             top: -110px
@@ -357,22 +359,30 @@ html
         .owl-stage-outer
             height: 100% !important
         .item
-            background-color: variables.$whiteColor
-            padding: 30px
-            border-radius: 20px
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+            display: flex
+            justify-content: center
+            .cs-item-card
+                border-radius: 20px
+                background-color: variables.$whiteColor
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+                max-width: 385px
+                height: 430px
+                width: 100%
+                padding: 32px
+                display: flex
+                flex-direction: column
+                gap: 16px
             .cs-desc
-                font-size: 18px
-                line-height: 26px
+                font-size: 24px
+                line-height: 32px
                 color: variables.$colorBlack
                 font-weight: variables.$fontWeightRegular
                 margin-top: 12px
                 display: -webkit-box
-                -webkit-line-clamp: 4
+                -webkit-line-clamp: 5
                 -webkit-box-orient: vertical
                 overflow: hidden
                 text-overflow: ellipsis
-                height: 100px
             .cs-duo
                 display: flex
                 align-items: center
@@ -491,13 +501,13 @@ html
             width: 100%
         .cs-ellipses
             position: absolute
-            left: 50%
-            top: 50%
+            left: 55%
+            top: 46%
             transform: translate(-50%,-50%)
             z-index: 0
             max-width: 724px
             width: 100%
-            height: 425px
+            height: 455px
             object-fit: contain
         .cs-sec6-text
             position: absolute
@@ -605,3 +615,47 @@ html
         box-shadow: none
         border: none
         outline: 0
+
+button 
+    cursor: pointer
+#cs-container-quiz 
+    max-width: 700px
+    width: 100%
+    margin: 50px auto
+    padding: 20px
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+    border-radius: 8px
+    background-color: variables.$primaryColor
+#js-question-area 
+    button 
+        display: block
+        max-width: 500px
+        width: 100%
+        margin-bottom: 12px
+        text-align: left
+        padding: 10px
+        border: none
+        background-color: transparent
+        border: 2px solid transparent
+        &.active
+            border: 2px solid variables.$color5
+#cs-next
+    border: none
+    padding: 10px 20px
+    background-color: variables.$color3
+    color: variables.$whiteColor
+    border-radius: 2px
+    &:disabled
+        background-color: variables.$color4
+        cursor: not-allowed
+#js-time-count
+    max-width: 700px
+    width: 100%
+    margin: 0 auto
+    font-size: 20px
+    color: variables.$color3
+    display: flex
+    &.deactive
+        display: none
+#cs-question-title 
+    color: variables.$color3

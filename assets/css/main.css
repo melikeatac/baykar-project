@@ -95,6 +95,7 @@ html {
   padding-top: 100px;
   object-fit: contain;
   background-color: #fefbea;
+  background: linear-gradient(to bottom right, #fefbeb 0%, #fefbeb 53%, #fef3c7 53%, #fef3c7 100%);
 }
 .cs-sec-1 .cs-banner-1 {
   justify-content: space-between;
@@ -404,7 +405,7 @@ html {
   background-color: #FDE68A;
   max-width: 1360px;
   width: 100%;
-  height: 320px;
+  height: 420px;
   left: 50%;
   top: -50px;
   transform: translateX(-50%);
@@ -412,6 +413,9 @@ html {
 .cs-sec-4 .cs-carousel-1 {
   position: relative;
   z-index: 2;
+}
+.cs-sec-4 .cs-carousel-1 .owl-stage-outer {
+  padding-bottom: 40px;
 }
 .cs-sec-4 .cs-carousel-1 .owl-nav {
   position: absolute;
@@ -430,23 +434,32 @@ html {
   height: 100% !important;
 }
 .cs-sec-4 .cs-carousel-1 .item {
-  background-color: #ffffff;
-  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+.cs-sec-4 .cs-carousel-1 .item .cs-item-card {
   border-radius: 20px;
+  background-color: #ffffff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  max-width: 385px;
+  height: 430px;
+  width: 100%;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .cs-sec-4 .cs-carousel-1 .item .cs-desc {
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 24px;
+  line-height: 32px;
   color: #000000;
   font-weight: 400;
   margin-top: 12px;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 100px;
 }
 .cs-sec-4 .cs-carousel-1 .item .cs-duo {
   display: flex;
@@ -589,13 +602,13 @@ html {
 }
 .cs-sec-6 .cs-sec6-main .cs-ellipses {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 55%;
+  top: 46%;
   transform: translate(-50%, -50%);
   z-index: 0;
   max-width: 724px;
   width: 100%;
-  height: 425px;
+  height: 455px;
   object-fit: contain;
 }
 .cs-sec-6 .cs-sec6-main .cs-sec6-text {
@@ -719,4 +732,61 @@ html {
   box-shadow: none;
   border: none;
   outline: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+#cs-container-quiz {
+  max-width: 700px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 8px;
+  background-color: #fefbea;
+}
+
+#js-question-area button {
+  display: block;
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 12px;
+  text-align: left;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+#js-question-area button.active {
+  border: 2px solid #4CAF50;
+}
+
+#cs-next {
+  border: none;
+  padding: 10px 20px;
+  background-color: #607d8b;
+  color: #ffffff;
+  border-radius: 2px;
+}
+#cs-next:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+#js-time-count {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 20px;
+  color: #607d8b;
+  display: flex;
+}
+#js-time-count.deactive {
+  display: none;
+}
+
+#cs-question-title {
+  color: #607d8b;
 }/*# sourceMappingURL=main.css.map */

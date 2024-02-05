@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Example</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<style>
+
+</style>
+
+<body>
+    <div id="cs-container-quiz">
+        <h2 id="cs-question-title"></h2>
+        <div id="js-question-area"></div>
+        <button id="cs-next" disabled>Next</button>
+    </div>
+    <div id="js-time-count"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        const question_list = [];
+        let currentIndex = 0;
+        let answers = [];
+        let countdownInterval;
+
+        $(document).ready(function () {
+            $("#cs-next").on("click", function () {
+                nextQuestion();
+            });
+
+            fetch('https://jsonplaceholder.typicode.com/posts')
+                .then(response => response.json())
+                .then(posts => {
+                    for (let i = 0; i < 10; i++) {
+                        const post = posts[i];
+                        const question = {
+                            text: `Soru ${i + 1}) ${post.title}?`,
+                            choices: ["A) " + post.body.split('\n')[0], "B) " + post.body.split('\n')[1], "C) " + post.body.split('\n')[2], "D) " + post.body.split('\n')[3]],
+                        };
+                        question_list.push(question);
+                    }
+                    console.log(question_list);
+                    showQuestion();
+                })
+                .catch(error => console.error('Veri çekme hatası:', error));
+        });
+
+        function showQuestion() {
+            let countdown = 30;
+            const questionText = $("#cs-question-title");
+            const optionsContainer = $("#js-question-area");
+            const currentq = question_list[currentIndex];
+
+            $('#js-time-count').removeClass('deactive');
+            clearInterval(countdownInterval);
+
+            questionText.text(currentq.text);
+            optionsContainer.html("");
+
+            currentq.choices.forEach((choice, index) => {
+                const button = $("<button>").text(choice).on("click", function () {
+                    $('#js-question-area button').removeClass("active");
+                    $(this).addClass("active");
+                    answerQuestion(choice[0]);
+                }).prop("disabled", true);
+                optionsContainer.append(button);
+            });
+
+            $("#cs-next").prop("disabled", true);
+
+            countdownInterval = setInterval(() => {
+                $('#js-time-count').text(countdown + " sn sonra yeni soruya geçilecektir. Eski sorulara dönüş mümkün değildir.");
+                countdown--;
+                if (countdown < 0) {
+                    clearInterval(countdownInterval);
+                    nextQuestion();
+                }
+            }, 1000);
+
+            setTimeout(() => {
+                $("#js-question-area button").prop("disabled", false);
+                $("#cs-next").prop("disabled", false);
+            }, 10000);
+        }
+
+        function answerQuestion(userChoice) {
+            if (!answers[currentIndex]) {
+                answers[currentIndex] = { question: currentIndex + 1, answer: userChoice };
+            }
+            $("#cs-next").prop("disabled", false);
+        }
+
+        function nextQuestion() {
+            if (currentIndex < question_list.length - 1) {
+                currentIndex++;
+                showQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            const resultArea = $("#cs-container-quiz");
+            resultArea.html("<h1>ANSWERS</h1>");
+
+            const resultsList = $("<table>").html("<tr><th>Q</th><th>A</th></tr>");
+
+            answers.forEach(answer => {
+                const row_ans = $("<tr>").html(`<td>${answer.question}</td><td>${answer.answer}</td>`);
+                resultsList.append(row_ans);
+            });
+
+            resultArea.append(resultsList);
+            $('#js-time-count').addClass('deactive');
+        }
+
+    </script>
+
+
+</body>
+
+</html>

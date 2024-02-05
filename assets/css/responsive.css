@@ -8,6 +8,33 @@
     bottom: 60px;
     right: 5px;
   }
+  .cs-container-1 {
+    padding: 0 30px;
+  }
+  .cs-sec-1 .cs-banner-1 .cs-right .cs-bg-color {
+    max-width: 330px;
+    height: 330px;
+  }
+  .cs-sec-3 {
+    padding: 100px 0;
+  }
+  .cs-sec-3 .cs-sec3-main .cs-bg-img-2 {
+    right: 0;
+    max-width: 565px;
+  }
+  .cs-sec-5 {
+    height: 62vh;
+  }
+  .cs-sec-5 .cs-sec5-bg .cs-sec5-imgbox .cs-img-1 {
+    right: auto;
+    left: 0;
+    max-width: 630px;
+  }
+  .cs-sec-5 .cs-sec5-bg .cs-sec5-imgbox .cs-img-2 {
+    right: auto;
+    left: 35px;
+    max-width: 630px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   #goTpButton {
@@ -16,6 +43,16 @@
   }
   .cs-container-1 {
     padding: 0 2%;
+  }
+  .cs-sec-1 .cs-cardlist-1 {
+    justify-content: center;
+  }
+  .cs-sec-1 .cs-cardlist-1 .cs-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
   }
   .cs-sec-1 .cs-banner-1 .cs-left .cs-banner-button {
     justify-content: center;
@@ -30,6 +67,13 @@
     left: 50%;
     transform: translateX(-50%);
   }
+  .cs-sec-2 .cs-textbox-1 {
+    flex-direction: column;
+  }
+  .cs-sec-2 .cs-banner-2 .col-12 {
+    display: flex;
+    justify-content: center;
+  }
   .cs-sec-3 .cs-sec3-main .cs-bg-img-2 {
     right: 0;
     top: auto;
@@ -39,8 +83,28 @@
   .cs-sec-4 {
     padding: 0 0 50px 0;
   }
+  .cs-sec-4 .cs-bg-main {
+    height: 350px;
+  }
+  .cs-sec-4 .cs-carousel-1 .item .cs-item-card {
+    height: 360px;
+  }
+  .cs-sec-5 {
+    height: 85vh;
+  }
   .cs-sec-5 .cs-sec5-bg {
     margin: 0;
+  }
+  .cs-sec-5 .cs-sec5-bg .cs-sec5-list {
+    flex-direction: row;
+    overflow: hidden;
+    overflow-x: auto;
+    align-items: center;
+    margin: 0;
+    padding-bottom: 5px;
+  }
+  .cs-sec-5 .cs-sec5-bg .cs-sec5-list::-webkit-scrollbar {
+    height: 0;
   }
   .cs-sec-5 .cs-sec5-bg .cs-sec5-imgbox .cs-img-1 {
     max-width: 600px;
@@ -54,6 +118,9 @@
   }
   .cs-sec-6 .cs-sec6-main .cs-sec6-text {
     top: 55%;
+  }
+  .cs-sec-6 .cs-sec6-main .cs-ellipses {
+    left: 50%;
   }
   .cs-footer-main .cs-footer-list-2 {
     gap: 12px;
@@ -87,6 +154,7 @@
   }
   .cs-sec-1 {
     background: none;
+    background-image: url("/assets/img/banner-1.png");
     padding-top: 40px;
   }
   .cs-sec-1 .cs-cardlist-1 {
@@ -182,12 +250,19 @@
     font-size: 16px;
     line-height: 24px;
   }
+  .cs-sec-4 .cs-carousel-1 .item .cs-item-card {
+    height: 360px;
+  }
+  .cs-sec-4 .cs-bg-main {
+    height: 350px;
+  }
   .cs-sec-5 .cs-sec5-bg .cs-sec5-list {
     flex-direction: row;
     overflow: hidden;
     overflow-x: auto;
     align-items: center;
     margin: 0;
+    padding-bottom: 5px;
   }
   .cs-sec-5 .cs-sec5-bg .cs-sec5-list::-webkit-scrollbar {
     height: 0;
@@ -230,6 +305,10 @@
   }
   .cs-sec-6 .cs-sec6-main .cs-map, .cs-sec-6 .cs-sec6-main .cs-ellipses, .cs-sec-6 .cs-sec6-main .cs-sec6-text {
     top: 65%;
+    left: 50%;
+  }
+  .cs-sec-6 .cs-sec6-main .cs-ellipses {
+    max-width: 60%;
   }
   .cs-sec-6 .cs-sec6-main .cs-sec6-text .cs-title-1 {
     font-size: 48px;
