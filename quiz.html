@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<style>
-
-</style>
 
 <body>
     <div id="cs-container-quiz">
@@ -25,9 +22,14 @@
         const question_list = [];
         let currentIndex = 0;
         let answers = [];
+        let currentAnswer = null;
         let countdownInterval;
 
         $(document).ready(function () {
+            $("#js-question-area button").on('click', function () {
+                var buttonClass = $(this);
+                // console.log(buttonClass);
+            });
             $("#cs-next").on("click", function () {
                 nextQuestion();
             });
@@ -46,11 +48,30 @@
                     console.log(question_list);
                     showQuestion();
                 })
-                .catch(error => console.error('Veri çekme hatası:', error));
+                .catch(error => console.error('Error..', error));
         });
+        function answerQuestion(selectedAnswer) {
+            currentAnswer = selectedAnswer;
+            $("#cs-next").prop("disabled", false);
+        }
+
+        function nextQuestion() {
+            if (currentIndex < question_list.length - 1) {
+                if (currentAnswer) {
+                    answers[currentIndex] = { question: currentIndex + 1, answer: currentAnswer };
+                }
+                currentIndex++;
+                showQuestion();
+            } else {
+                if (currentAnswer) {
+                    answers[currentIndex] = { question: currentIndex + 1, answer: currentAnswer };
+                }
+                showResults();
+            }
+        }
 
         function showQuestion() {
-            let countdown = 30;
+            let countdown = 29;
             const questionText = $("#cs-question-title");
             const optionsContainer = $("#js-question-area");
             const currentq = question_list[currentIndex];
@@ -65,7 +86,7 @@
                 const button = $("<button>").text(choice).on("click", function () {
                     $('#js-question-area button').removeClass("active");
                     $(this).addClass("active");
-                    answerQuestion(choice[0]);
+                    currentAnswer = choice[0];
                 }).prop("disabled", true);
                 optionsContainer.append(button);
             });
@@ -87,25 +108,10 @@
             }, 10000);
         }
 
-        function answerQuestion(userChoice) {
-            if (!answers[currentIndex]) {
-                answers[currentIndex] = { question: currentIndex + 1, answer: userChoice };
-            }
-            $("#cs-next").prop("disabled", false);
-        }
-
-        function nextQuestion() {
-            if (currentIndex < question_list.length - 1) {
-                currentIndex++;
-                showQuestion();
-            } else {
-                showResults();
-            }
-        }
 
         function showResults() {
             const resultArea = $("#cs-container-quiz");
-            resultArea.html("<h1>ANSWERS</h1>");
+            resultArea.html("<h1>CEVAPLARINIZ</h1>");
 
             const resultsList = $("<table>").html("<tr><th>Q</th><th>A</th></tr>");
 
@@ -119,8 +125,6 @@
         }
 
     </script>
-
-
 </body>
 
 </html>
